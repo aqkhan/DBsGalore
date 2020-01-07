@@ -1,0 +1,20 @@
+version: "3"
+
+services: 
+    db-mysql-dev:
+        image: mysql:8
+        environment: 
+            MYSQL_ROOT_PASSWORD: aqkhan88
+        ports:
+            - "3306:3306"
+    db-mongo-dev:
+        image: mongo:3.4-xenial
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: aqkhan88
+        ports:
+            - "27017:27017"
+    db-redis-dev:
+        image: redis:5.0.7
+        ports:
+            - "6380:6379"
